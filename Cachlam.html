@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap&subset=vietnamese" rel="stylesheet">
+    <title>Đặc sản Trà Vinh - From Nhóm 1</title>
+    <link rel="icon" type="image/jpg" href="images/12t4.jpg" >
+    <button id="backToTop">↑</button>
+    <style>
+    body {
+      margin: 0;
+      font-family: Roboto;
+    }
+    
+    .bar {
+      background-color: #F7C7D9;
+      border-bottom: 3px solid #E76A8A;
+      color: #E58EB5;
+      display: flex;
+      align-items: center;
+    }
+    
+    .bar .can {
+      color: #E76A8A;
+      font-size: 24px;
+      text-align: center;
+      flex: 1;
+      padding: 20px;
+      font-weight: 600;
+    }
+    
+    .bar img {
+      width: 100px;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+
+
+    .navbar {
+      display: flex;
+      background-color: #F7C7D9;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: transparent;
+    }
+    
+    .navbar .tab {
+      background: #F3B8CD;
+      color: white;
+      flex: 1;
+      text-align: center;
+      padding: 12px 0;
+      text-decoration: none;
+      font-size: 17px;
+      transition: background 0.25s, color 0.25s;
+    }
+      
+    .navbar .tab:hover {
+      background-color: #FCE1EB; 
+      border-bottom: 3px solid #D36A92;
+      color: #C05A89;
+      transition: 0.25s;
+    }
+    
+    .navbar .tab.active {
+      background: #ffffff;
+      color: #D36A92;
+      border-bottom: 3px solid #D36A92;
+    }
+
+
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem 4%;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .card-container .card {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border: 1px solid #F2D5E2;
+      overflow: hidden;
+      max-width: 480px;
+      width: 100%;
+      cursor: default;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+      margin: 20px 5%;
+    }
+    
+    .card .web {
+      width: 30px;
+      padding: 0;
+    }
+
+    .card ul li{
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+    .card .highlight1 {
+      background-color: #F9C9D8;
+      padding: 3px 6px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #F9C9D8;
+    }
+    
+    .card .step-desc {
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.55;
+      margin-left: 4px;
+    }
+    
+    .card .highlight2 {
+      background-color: #D7E8FF;
+      padding: 3px 6px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #D7E8FF;
+    }
+    
+    .card .highlight3 {
+      background-color: #E3F9ED;
+      padding: 3px 6px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #E3F9ED;
+    }
+    
+    .card .highlight4 {
+      background-color: #FFF7D6;
+      padding: 3px 6px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px #FFF7D6;
+    }
+    
+    .card ul li {
+      line-height: 1.8;
+      padding: 4px 0;
+    }
+    
+    .card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      border-bottom: 3px solid #E8A8C6;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      padding: 1rem 0;
+      margin-top: 0;
+      text-align: center;
+      color: #222222;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+
+    }
+    
+    .card p {
+      padding: 0 1rem;
+      line-height: 1.6;
+      color: #444444;
+      letter-spacing: 1px;
+    }
+    
+    .card-step {
+      background: #fff;
+      padding: 14px 18px;
+      border-radius: 14px;
+      margin-top: 2.5rem;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-left: 8px solid #ffd5e5;
+    }
+
+    .card-step-number {
+      font-size: 22px;
+      font-weight: 700;
+      color: #444;
+      min-width: 40px;
+    }
+
+    .card-step-text {
+      font-size: 18px;
+      line-height: 1.55;
+      color: #333;
+    }
+
+    .card-pink { border-left-color: #F3AFC5; }
+    .card-blue { border-left-color: #cde7ff; }
+    .card-green { border-left-color: #d8f8e1; }
+    .card-yellow { border-left-color: #fff4c8; }
+    
+    .images {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    
+    .images img {
+      width: 300px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+
+      
+    .footer-style {
+      background-color: #f8c5d4;
+      text-align: center;
+      color: #7b4f74;
+      font-weight: 500;
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.07);
+      position: relative;
+      bottom: 0;
+      margin-top: 3rem;
+    }
+
+
+      
+    #backToTop {
+      position: fixed;
+      z-index: 9999;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 16px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #e58dad;
+      color: white;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    #backToTop:hover {
+      transform: scale(1.1);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+        <a href="index.html"><img src="images/Bietdoi1st.jpg"></a>
+        <span class="can">Đặc sản Trà Vinh - Bún nước lèo & bánh tét Trà Cuôn</span>
+    </div>
+    <div class="navbar">
+      <a class="tab" href="LichSu.html">Lịch sử</a>
+      <a class="tab">Nguyên liệu</a>
+      <a class="tab active">Cách làm</a>
+      <a class="tab" href="bonus.html">Đặc biệt</a>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h3>Công Thức Nấu Bún Nước Lèo Trà Vinh Từ A Đến Z</h3>
+        <div class="card-step card-pink">
+          <div class="card-step-number">1</div>
+          <div class="card-step-text">Sơ chế nguyên liệu</div>
+        </div>
+        <ul class="line">
+          <li><span class="highlight1">Xương heo (nếu có)</span><span class="step-desc">: Rửa sạch, chần qua nước sôi rồi ninh lấy nước dùng ngọt.</span>
+          </li>
+          <li><span class="highlight1">Cá lóc</span><span class="step-desc">: Làm sạch, có thể luộc sơ rồi gỡ lấy thịt, xương cá cho vào nồi nước dùng.</span>
+          </li>
+          <li><span class="highlight1">Tôm tươi</span><span class="step-desc">: Rửa sạch.</span>
+          </li>
+          <li><span class="highlight1">Hành tím & Ngải bún</span><span class="step-desc">: Hành tím bóc vỏ, một nửa băm nhỏ, một nửa nướng thơm. Ngải bún cạo vỏ, rửa sạch.</span>
+          </li>
+        </ul>
+        <div class="card-step card-blue">
+          <div class="card-step-number">2</div>
+          <div class="card-step-text">Nấu nước lèo</div>
+        </div>
+        <ul class="line">
+          <li><span class="highlight2">Bước 1</span><span class="step-desc">: Hòa tan mắm bò hóc (hoặc mắm cá linh/cá sặc) với nước dùng (nước ninh xương, nước luộc cá). Đun sôi cho mắm rã hết thịt cá.</span>
+          </li>
+          <li><span class="highlight2">Bước 2</span><span class="step-desc">: Lọc hỗn hợp nước mắm qua rây để loại bỏ xương và bã, lấy phần nước cốt trong.</span>
+          </li>
+          <li><span class="highlight2">Bước 3</span><span class="step-desc">: Cho phần nước mắm đã lọc trở lại nồi, thêm sả đập dập, hành tím nướng thơm, ngải bún và nước dừa tươi vào nấu cùng.</span>
+          </li>
+          <li><span class="highlight2">Bước 4</span><span class="step-desc">: Nêm nếm gia vị (đường, bột ngọt, nước mắm) sao cho vừa khẩu vị. Nước lèo chuẩn vị Trà Vinh thường có vị mặn mòi đặc trưng của mắm, ngọt thanh của cá và nước dừa, thơm mùi sả, ngải bún.</span>
+          </li>
+        </ul>
+        <div class="card-step card-green">
+          <div class="card-step-number">3</div>
+          <div class="card-step-text">Hoàn thiện và thưởng thức</div>
+        </div>
+        <ul class="line">
+          <li><span class="highlight3">Bước 1</span><span class="step-desc">: Khi nước lèo sôi và thấm vị, cho cá lóc đã gỡ thịt (hoặc để nguyên con), tôm tươi, huyết heo vào nấu chín.</span>
+          </li>
+          <li><span class="highlight3">Bước 2</span><span class="step-desc">: Chần bún tươi qua nước sôi, cho vào tô.</span>
+          </li>
+          <li><span class="highlight3">Bước 3</span><span class="step-desc">: Xếp thịt heo quay, cá, tôm, chả lụa (nếu có) lên trên mặt bún.</span>
+          </li>
+          <li><span class="highlight3">Bước 4</span><span class="step-desc">: Chan nước lèo nóng hổi ngập tô.</span>
+          </li>
+          <li><span class="highlight3">Bước 5</span><span class="step-desc">: Ăn kèm với các loại rau sống đã chuẩn bị. </span>
+          </li>
+        </ul>
+        <a href="https://loiphat.com.vn/nau-bun-nuoc-leo-tra-vinh-chuan-vi-voi-noi-nau-pho-dien"><img class="web"src="images/loiphat.jpg"></a>
+      </div>
+      <div class="card">
+        <h3>Bí quyết nguyên liệu bánh tét Trà Cuôn</h3>
+        <div class="card-step card-pink">
+          <div class="card-step-number">1</div>
+          <div class="card-step-text">Chuẩn bị nguyên liệu</div>
+        </div>
+        <ul class="line">
+          <li><span class="highlight1">Gạo nếp</span><span class="step-desc">: Chọn nếp mới, hạt tròn mẩy, vo sạch và ngâm trong khoảng 6-8 tiếng.</span>
+          </li>
+          <li><span class="highlight1">Tạo màu</span><span class="step-desc">: Lá rau ngót hoặc lá dứa được rửa sạch, xay nhuyễn, vắt lấy nước cốt để ngâm nếp, tạo màu xanh tự nhiên cho bánh.</span>
+          </li>
+          <li><span class="highlight1">Nhân bánh</span><span class="step-desc">: Đậu xanh vo sạch, nấu hoặc sên chín rồi vo thành cuộn dài. Thịt mỡ heo cắt miếng dài, ướp gia vị (thường có hành tím, tiêu, nước mắm). Bánh tét Trà Cuôn còn nổi tiếng với nhân trứng muối.</span>
+          </li>
+          <li><span class="highlight1">Lá gói</span><span class="step-desc">: Lá chuối chọn lá to, xanh mướt, không rách, lau sạch và phơi hơi héo để dễ gói. </span>
+          </li>
+        </ul>
+        <div class="card-step card-blue">
+          <div class="card-step-number">2</div>
+          <div class="card-step-text">Sơ chế và chế biến nhân</div>
+        </div>
+        <ul class="line">
+          <li><span class="highlight2">Ngâm nếp</span><span class="step-desc">: Trộn nếp đã ngâm ráo nước với nước cốt lá rau ngót hoặc lá dứa, thêm chút muối và nước cốt dừa để nếp có màu đẹp và vị béo.</span>
+          </li>
+          <li><span class="highlight2">Sên đậu xanh</span><span class="step-desc">: Đậu xanh sau khi nấu chín được sên dẻo, có thể thêm gia vị cho vừa miệng.</span>
+          </li>
+          <li><span class="highlight2">Ướp thịt</span><span class="step-desc">: Thịt mỡ heo được ướp đậm đà, để thấm gia vị. </span>
+          </li>
+        </ul>
+        <div class="card-step card-green">
+          <div class="card-step-number">3</div>
+          <div class="card-step-text">Gói bánh</div>
+        </div>
+        <ul class="line">
+          <li><span class="highlight3">Chuẩn bị lá</span><span class="step-desc">: Xếp 2-3 lớp lá chuối, đặt dây lạt (hoặc dây nilon) dọc theo chiều dài lá.</span>
+          </li>
+          <li><span class="highlight3">Trải nếp và nhân</span><span class="step-desc">: Trải đều một lớp nếp mỏng lên lá, sau đó đặt cuộn đậu xanh và miếng thịt đã ướp lên trên. Phủ thêm một lớp nếp nữa sao cho che kín phần nhân.</span>
+          </li>
+          <li><span class="highlight3">Cuộn và gói</span><span class="step-desc">: Cuộn chặt lá chuối bao quanh phần nếp và nhân, sau đó dùng dây lạt buộc chặt theo các bước gói bánh tét truyền thống để bánh tròn đều và đẹp. </span>
+          </li>
+        </ul>
+        <div class="card-step card-yellow">
+          <div class="card-step-number">4</div>
+          <div class="card-step-text">Nấu bánh và hoàn thiện</div>
+        </div>
+        <ul class="line">
+          <li><span class="highlight4">Luộc bánh</span><span class="step-desc">: Xếp bánh vào nồi lớn, đổ ngập nước và đun sôi. Thời gian luộc khá lâu, có thể từ 6 đến 8 tiếng tùy kích thước đòn bánh, để nếp và nhân chín mềm hoàn toàn.</span>
+          </li>
+          <li><span class="highlight4">Kiểm tra</span><span class="step-desc">: Trong quá trình nấu, cần châm thêm nước sôi để bánh luôn ngập nước. </span>
+          </li>
+          <li><span class="highlight4">Vớt và ép bánh</span><span class="step-desc">: Sau khi bánh chín, vớt ra, rửa qua nước lạnh cho sạch mỡ và để ráo. Dùng vật nặng ép nhẹ lên các đòn bánh khi còn ấm để bánh chặt hơn và bảo quản được lâu hơn. </span>
+          </li>
+        </ul>
+        <a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/nguoi-tra-vinh-chia-se-cach-lam-banh-tet-tra-cuon-deo-thom-dung-chuan-1298959"><img class="web"src="images/bachhoa.jpg"></a>
+      </div>
+    </div>
+    <footer class="footer-style">
+        © 2025 Đặc Sản Trà Vinh | Khám phá ẩm thực miền Tây From Nhom 1 with Love
+    </footer>
+  </body>
+  <script>
+    const btn = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    btn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+</html>

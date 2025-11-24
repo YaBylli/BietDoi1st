@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap&subset=vietnamese" rel="stylesheet">
+    <title>Dac san Tra Vinh</title>
+    <link rel="icon" type="image/jpg" href="images/12t4.jpg" >
+    <button id="backToTop">↑</button>
+    <style>
+    body {
+      margin: 0;
+      font-family: Roboto;
+    }
+
+    .bar {
+      background-color: #F7C7D9;
+      border-bottom: 3px solid #E76A8A;
+      color: #E58EB5;
+      display: flex;
+      align-items: center;
+    }
+    
+    .bar .can {
+      color: #E76A8A;
+      font-size: 24px;
+      text-align: center;
+      flex: 1;
+      padding: 20px;
+      font-weight: 600;
+    }
+    
+    .bar img {
+      width: 100px;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    
+    
+    
+    .navbar {
+      display: flex;
+      background-color: #F7C7D9;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: transparent;
+    }
+    
+    .navbar .tab {
+      background: #F3B8CD;
+      color: white;
+      flex: 1;
+      text-align: center;
+      padding: 12px 0;
+      text-decoration: none;
+      font-size: 17px;
+      transition: background 0.25s, color 0.25s;
+    }
+      
+    .navbar .tab:hover {
+      background-color: #FCE1EB; 
+      border-bottom: 3px solid #D36A92;
+      color: #C05A89;
+      transition: 0.25s;
+    }
+    
+    .navbar .tab.active {
+      background: #ffffff;
+      color: #D36A92;
+      border-bottom: 3px solid #D36A92;
+    }
+    
+    
+    
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem 4%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-container .card {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border: 1px solid #F2D5E2;
+      overflow: hidden;
+      max-width: 480px;
+      width: 100%;
+      cursor: default;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
+      margin: 20px 5%;
+    }
+    
+    .card .web {
+      width: 30px;
+      padding: 0;
+    }
+    
+    .card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      border-bottom: 3px solid #E8A8C6;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      padding: 1rem 0;
+      margin-top: 0;
+      text-align: center;
+      color: #222222;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    
+    .card p {
+      padding: 0 1rem;
+      line-height: 1.6;
+      color: #444444;
+      letter-spacing: 1px;
+    }
+    
+    .images {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    
+    .images img {
+      width: 150px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    
+    
+    .footer-style {
+      background-color: #f8c5d4;
+      text-align: center;
+      color: #7b4f74;
+      font-weight: 500;
+      padding: 1.5rem 1rem;
+      font-size: 0.95rem;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.07);
+      position: relative;
+      bottom: 0;
+      margin-top: 3rem;
+    }
+  
+    #backToTop {
+      position: fixed;
+      z-index: 9999;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 16px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      background: #e58dad;
+      color: white;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    
+    #backToTop:hover {
+      transform: scale(1.1);
+    }
+    
+    </style>
+  </head>
+  <body>
+    <div class="bar">
+        <a href="index.html"><img src="images/Bietdoi1st.jpg"></a>
+        <span class="can">Đặc sản Trà Vinh - Bún nước lèo & bánh tét Trà Cuôn</span>
+    </div>
+    <div class="navbar">
+      <a class="tab active">Lịch sử</a>
+      <a class="tab" href="Nn.html">Nguyên liệu</a>
+      <a class="tab" href="Cachlam.html">Cách làm</a>
+      <a class="tab" href="bonus.html">Đặc biệt</a>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <h3>Bún nước lèo Trà Vinh xưa và nay</h3>
+        <p>Bún nước lèo Trà Vinh có nguồn gốc từ cộng đồng người Khmer, ban đầu được nấu với mắm cá sặc đặc trưng. Qua thời gian, sự giao thoa văn hóa với người Kinh và người Hoa đã làm phong phú thêm món ăn này. Người Kinh bổ sung các loại rau và gia vị, trong khi người Hoa thêm giò chả, thịt quay. Chính sự kết hợp hài hòa này đã tạo nên hương vị bún nước lèo Trà Vinh độc đáo, trở thành đặc sản nổi tiếng của vùng đất ba dân tộc.</p>
+        <div class="images">
+          <img src="images/lsbnl.jpg">
+          <img src="images/lsbnl1.jpg">
+        </div>
+        <a href="https://mia.vn/cam-nang-du-lich/mon-bun-nuoc-leo-tra-vinh-17783"><img class="web"src="images/mia.jpg"></a>
+      </div>
+      <div class="card">
+        <h3>Bánh tét Trà Cuôn: Hành trình di sản</h3>
+        <p>Bánh tét Trà Cuôn là đặc sản nổi tiếng Trà Vinh, có nguồn gốc từ cộng đồng người Khmer địa phương. Ban đầu chỉ là món ăn dân dã, qua thời gian, người thợ bánh đã sáng tạo thêm nhiều loại nhân và màu sắc phong phú. Trải qua hàng chục năm gìn giữ và phát triển, bánh tét Trà Cuôn đã trở thành thương hiệu nổi tiếng, được công nhận là làng nghề truyền thống và đạt kỷ lục châu Á.
+        </p>
+        <div class="images">
+          <img src="images/lsbttc.jpg">
+          <img src="images/lsbttc1.jpg">
+        </div>
+        <a href="https://dacsannamdinh.org/dac-san-vung-mien/banh-tet-tra-cuon-la-dac-san-noi-tieng-cua.html"><img class="web"src="images/namdinh.jpg"></a>
+      </div>
+    </div>
+    <footer class="footer-style">
+        © 2025 Đặc Sản Trà Vinh | Khám phá ẩm thực miền Tây From Nhom 1 with Love
+    </footer>
+  </body>
+  <script>
+    const btn = document.getElementById("backToTop");
+
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop > 100) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    btn.onclick = function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    };
+  </script>
+</html>
